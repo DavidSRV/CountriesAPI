@@ -1,5 +1,6 @@
 import React from 'react';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import '../navbar/__Navbar.scss'
 
 const NavBar = () => {
   return (

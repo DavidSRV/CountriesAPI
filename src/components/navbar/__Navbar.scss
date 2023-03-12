@@ -1,0 +1,29 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    border-bottom: 5px solid rgba(128, 128, 128, 0.134);
+
+    section{
+
+        margin: 0 3%;
+
+        & .nav__description{
+            font-weight: 700;
+        }
+    }
+
+
+    & .nav__theme{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+
+        &:hover{
+            scale: 1.1;
+        }
+    }
+}

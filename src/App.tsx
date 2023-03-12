@@ -1,4 +1,5 @@
 import NavBar from "./components/navbar/NavBar"
+import './sass/resets.scss'
 
 function App() {
   return (
