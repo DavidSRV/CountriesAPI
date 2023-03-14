@@ -17,9 +17,9 @@ function App() {
       <ul>
         {countries &&
           countries.map((country) => (
-            <div>
-              <li key={country.name.common}>{country.name.common}</li>
-              <li key={country.name.common}><img src={`${country.flags.png}`} alt="" /></li>
+            <div key={country.name.common}>
+              <li >{country.name.common}</li>
+              <li ><img src={`${country.flags.png}`} alt={`${country.flags.alt}`} /></li>
             </div>
           ))}
       </ul>
