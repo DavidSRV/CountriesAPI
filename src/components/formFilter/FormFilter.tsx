@@ -15,6 +15,7 @@ const FormFilter = () => {
       </div>
       <div className="form__containerFilterRegion">
         <div className="form__labelIcon">
+          <dir> option</dir>
           <label htmlFor="region">Filter by Region</label>
         </div>
         <select name="region">
