@@ -10,12 +10,11 @@ const FormFilter = () => {
         <input
           className="form__inputText"
           type="text"
-          placeholder="Search for a country"
+          placeholder="Search for a country..."
         />
       </div>
       <div className="form__containerFilterRegion">
         <div className="form__labelIcon">
-          <dir> option</dir>
           <label htmlFor="region">Filter by Region</label>
         </div>
         <select name="region">

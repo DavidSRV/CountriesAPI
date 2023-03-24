@@ -17,8 +17,7 @@ function App() {
       <NavBar />
       <FormFilter/>
       <ul>
-        {countries &&
-          countries.map((country) => (
+        {countries?.map((country) => (
             <div key={country.name.common}>
               ¥¥
               <li>{country.name.common}</li>
