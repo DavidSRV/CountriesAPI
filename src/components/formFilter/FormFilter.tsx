@@ -17,7 +17,7 @@ const FormFilter = () => {
         <div className="form__labelIcon">
           <label htmlFor="region">Filter by Region</label>
         </div>
-        <select name="region">
+        <select name="region" className="region">
           <option value="Africa">Africa</option>
           <option value="America">America</option>
           <option value="Asia">Asia</option>
