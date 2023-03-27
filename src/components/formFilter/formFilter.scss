@@ -29,10 +29,11 @@ form {
 
     & .form__containerFilterRegion{
 
-
         & .region{
             width: 100%;
             appearance: none;
+            outline: none;
+            border: none;
 
         }
     }
