@@ -15,21 +15,15 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      <FormFilter/>
-      <ul>
+      <FormFilter />
+      <div>
         {countries?.map((country) => (
-            <div key={country.name.common}>
-              ¥¥
-              <li>{country.name.common}</li>
-              <li>
-                <img
-                  src={`${country.flags.png}`}
-                  alt={`${country.flags.alt}`}
-                />
-              </li>
-            </div>
-          ))}
-      </ul>
+          <div key={country.name.common}>
+            <h1> {country.name.common}</h1>
+            <img src={`${country.flags.png}`} alt={`${country.flags.alt}`} />
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
