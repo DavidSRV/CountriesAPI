@@ -1,18 +1,17 @@
-import {createSlice} from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { useFetch } from "../../hooks/useFetch";
 
-const [countries] = useFetch("https://restcountries.com/v3.1/all"
-);
+async function fecthData() {
+  const [countries] = useFetch("https://restcountries.com/v3.1/all");
+  return countries
+}
+
+const initialState = fecthData();
 
 export const flagsSlice = createSlice({
-    name: "flags",
-    initialState:{
-        infoFlags: countries
-    },
-    reducers: {
-
-    }
-})
+  name: "flags",
+  initialState,
+  reducers: {},
+});
 
 export default flagsSlice.reducer;
-export const flagsInfo = (state:any) => state.flags.infoFlags;
