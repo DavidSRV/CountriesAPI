@@ -5,7 +5,7 @@ interface ApiError extends Error {
   statusText: string;
 }
 
-interface ApiCountry {
+export interface ApiCountry {
   name: {
     common: string;
   };

@@ -1,17 +1,37 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { useFetch } from "../../hooks/useFetch";
+import { createSlice} from "@reduxjs/toolkit";
+import { ApiCountry, useFetch } from "../../hooks/useFetch";
 
-async function fecthData() {
-  const [countries] = useFetch("https://restcountries.com/v3.1/all");
-  return countries
+export interface FlagsState{
+  data: ApiCountry[] | null;
+  isLoading: boolean;
+  error: Error | null;
 }
 
-const initialState = fecthData();
+const initialState = {
+  data: null,
+  isLoading: false,
+  error: null
+}
+
 
 export const flagsSlice = createSlice({
   name: "flags",
   initialState,
-  reducers: {},
+  reducers: {
+    setData:(state, action) => {
+      state.data = action.payload;
+    },
+    
+    setIsLoading: (state, action) => {
+      state.isLoading = action.payload
+    },
+
+    setError: (state, action ) => {
+      state.error = action.payload
+    },
+  },
+
+
 });
 
-export default flagsSlice.reducer;
+export const {setData, setIsLoading, setError} = flagsSlice.actions

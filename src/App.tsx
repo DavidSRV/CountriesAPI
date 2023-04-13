@@ -1,8 +1,12 @@
 import { useSelector } from "react-redux";
 import FormFilter from "./components/formFilter/FormFilter";
 import NavBar from "./components/navbar/NavBar";
-import { useFetch } from "./hooks/useFetch";
+import { ApiCountry, useFetch } from "./hooks/useFetch";
 import "./sass/resets.scss";
+
+interface AppState {
+  flags: ApiCountry[];
+}
 
 function App() {
   const [countries, isLoading, error] = useFetch(
@@ -13,7 +17,7 @@ function App() {
 
   if (error) return <div>Error: {error.message}</div>;
 
-  const stateFlags = useSelector((state) => state.flags)
+  // const stateFlags = useSelector((state:AppState) => state.flags)
 
 
   return (
@@ -21,11 +25,11 @@ function App() {
       <NavBar />
       <FormFilter />
       <div>
-        {stateFlags.map((country: any) => (
+        {/* {stateFlags.map((country:ApiCountry) => (
           <div key={country.name.common}>
             <h1>{country.name.common}</h1>
           </div>
-        ))}
+        ))} */}
         {/* {countries?.map((country) => (
           <div key={country.name.common}>
             <h1> {country.name.common}</h1>
